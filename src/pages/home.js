@@ -11,7 +11,7 @@ const HomePage = {
             
             <main>
                 <div class="banner newsDemo">
-                    <img src="https://picsum.photos/1500/400" />
+                    <img src="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/d4d4a276928965.5d4d803d44b42.png" />
                 </div>
                 <div class="news">
                     ${await News.render()}

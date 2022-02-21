@@ -35,26 +35,26 @@ const AdminEditNews = {
           <div class="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
             <!-- Replace with your content -->
             <form action="" id="form-edit">
-              <input type="text"
+           Tiêu đề   <input type="text"
                     id="title-post"
-                    class="border border-black"
+                    class="bg-gray-100 p-2 rounded-lg border-2 border-indigo-500 shadow-md focus:outline-none focus:border-indigo-600"
                     placeholder="Title"
                     value="${data.title}"
               > <br />
-              <input type="file"
+            Ảnh  <input type="file"
                     id="img-post"
-                    class="border border-black"
+                    class="bg-gray-100 p-2 rounded-lg border-2 border-indigo-500 shadow-md focus:outline-none focus:border-indigo-600 mt-2"
                     placeholder="Image"
               > <br />
-              <img src="${data.img}" id="img-preview"/>
-              <textarea name="" 
+              <img src="${data.img}" id="img-preview" class="mt-2"/>
+             Chi tiết nội dung <input name="" 
                 id="desc-post" 
                 cols="30" 
                 rows="10" 
-                class="border border-black"
+                class="bg-gray-100 p-2 rounded-lg border-2 border-indigo-500 shadow-md focus:outline-none focus:border-indigo-600"
                 value="${data.desc}"
-              ></textarea><br />
-              <button class="bg-blue-500 p-4 text-white">Cập nhật</button>
+              ></input><br />
+              <button class="bg-blue-500 p-4 text-white mt-2">Cập nhật</button>
             </form>
             <!-- /End replace -->
           </div>

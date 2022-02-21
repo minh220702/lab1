@@ -1,6 +1,3 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-.menu-item__link {
-	@apply block text-white hover:bg-indigo-500 px-4 py-3;
-}

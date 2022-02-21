@@ -4,22 +4,18 @@ const Header = {
     render() {
         return /* html */`
         <header>
-       
         <div class="bg-red-500 items-center px-5 xl:px-12 py-6 flex w-full">
-        <div>
-        <img src="https://dothethao.net.vn/wp-content/uploads/2020/06/logo-manchester-united.png" alt="" width="80px">
-        </div>
-            <ul class="hidden md:flex px-4 mx-auto font-semibold font-heading space-x-2 text-white">
-                <li><a href="/" class="block px-4 py-3 hover:bg-indigo-500 hover:text-white">Home </a></li>
-                <li><a href="/about" class="block px-4 py-3 hover:bg-indigo-500 hover:text-white">About</a></li>
-                <li><a href="/product" class="block px-4 py-3 hover:bg-indigo-500 hover:text-white">Product</a></li>
-                <li><a href="/contact" class="block px-4 py-3 hover:bg-indigo-500 hover:text-white">Contact</a></li>
-                <li><a href="/admin/dashboard" class="block px-4 py-3 hover:bg-indigo-500 hover:text-white">Dashboard</a></li>
-                ${localStorage.getItem('user') ? `
-                    <li><a class="block px-4 py-3 hover:bg-indigo-500 hover:text-white hidden" id="email"></a> </li>
-                    <li><a class=" block px-4 py-3 hover:text-black mx-10" id="logout">Logout</a></li>
-                    
-                `: ""}
+            <div>
+            <img src="https://dothethao.net.vn/wp-content/uploads/2020/06/logo-manchester-united.png" alt="" class="w-[80px]">
+            </div>
+                <ul class="hidden md:flex px-4 mx-auto font-semibold font-heading space-x-2 text-white">
+                    <li><a href="/" class="block px-4 py-3 hover:bg-indigo-500 hover:text-white">Home </a></li>
+                    <li><a href="/about" class="block px-4 py-3 hover:bg-indigo-500 hover:text-white">About</a></li>
+                    <li><a href="/product" class="block px-4 py-3 hover:bg-indigo-500 hover:text-white">Product</a></li>
+                    <li><a href="/contact" class="block px-4 py-3 hover:bg-indigo-500 hover:text-white">Contact</a></li>
+                    <li><a href="/admin/dashboard" class="block px-4 py-3 hover:bg-indigo-500 hover:text-white">Dashboard</a></li>
+            <span id="account" class="text-white"></span>
+            ${localStorage.getItem('user') ? '<button id="logout" class="text-black">Logout</button>' : ""}
             </ul>
             <div class="hidden xl:flex items-center space-x-5 items-center">
             <a class="hover:text-gray-200" href="#">
@@ -54,7 +50,7 @@ const Header = {
     afterRender(){
         const account = document.querySelector('#account');
         const btnLogout = document.querySelector('#logout');
-        account.innerHTML = JSON.parse(localStorage.getItem('user')).email;
+       
 
         btnLogout.addEventListener('click', function(){
            localStorage.removeItem('user');

@@ -1,4 +1,4 @@
-import style from "./news.module.css";
+
 import axios from 'axios';
 import { getAll } from "../api/post";
 const News = {
