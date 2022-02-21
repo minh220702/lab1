@@ -5,7 +5,7 @@ const News = {
     async render() {
         const { data } = await getAll()
         return /* html */`
-        <div class="grid grid-cols-3 gap-8 pt-6  pb-6">
+        <div class="grid grid-cols-3 gap-8 pt-6  pb-6 pl-40">
         ${data.map((post) => `
 <div class=" w-80 bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl hover:scale-105 duration-500 transform transition cursor-pointer">
 <a href="/news/${post.id}">  

@@ -6,14 +6,14 @@ const Header = {
         <header>
         <div class="bg-red-500 items-center px-5 xl:px-12 py-6 flex w-full">
             <div>
-            <img src="https://dothethao.net.vn/wp-content/uploads/2020/06/logo-manchester-united.png" alt="" class="w-[80px]">
+            <img src="https://dothethao.net.vn/wp-content/uploads/2020/06/logo-manchester-united.png" alt="" class="w-[100px]">
             </div>
                 <ul class="hidden md:flex px-4 mx-auto font-semibold font-heading space-x-2 text-white">
-                    <li><a href="/" class="block px-4 py-3 hover:bg-indigo-500 hover:text-white">Home </a></li>
-                    <li><a href="/about" class="block px-4 py-3 hover:bg-indigo-500 hover:text-white">About</a></li>
-                    <li><a href="/product" class="block px-4 py-3 hover:bg-indigo-500 hover:text-white">Product</a></li>
-                    <li><a href="/contact" class="block px-4 py-3 hover:bg-indigo-500 hover:text-white">Contact</a></li>
-                    <li><a href="/admin/dashboard" class="block px-4 py-3 hover:bg-indigo-500 hover:text-white">Dashboard</a></li>
+                    <li><a href="/" class="block px-4 py-3 hover:bg-indigo-500 hover:text-white text-xl">Home </a></li>
+                    <li><a href="/about" class="block px-4 py-3 hover:bg-indigo-500 hover:text-white text-xl">About</a></li>
+                    <li><a href="/product" class="block px-4 py-3 hover:bg-indigo-500 hover:text-white text-xl">Product</a></li>
+                    <li><a href="/contact" class="block px-4 py-3 hover:bg-indigo-500 hover:text-white text-xl">Contact</a></li>
+                    <li><a href="/admin/dashboard" class="block px-4 py-3 hover:bg-indigo-500 hover:text-white text-xl">Dashboard</a></li>
             <span id="account" class="text-white"></span>
             ${localStorage.getItem('user') ? '<button id="logout" class="text-black">Logout</button>' : ""}
             </ul>

@@ -4,14 +4,14 @@ import News from "../components/news";
 const HomePage = {
     async render() {
         return /* html */`
-        <div class="max-w-5xl mx-auto">
+        <div class="  mx-auto">
             <div id="header">
                 ${Header.render()}
             </div>
             
             <main>
                 <div class="banner newsDemo">
-                    <img src="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/d4d4a276928965.5d4d803d44b42.png" />
+                    <img src="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/d4d4a276928965.5d4d803d44b42.png" width="1910px" />
                 </div>
                 <div class="news">
                     ${await News.render()}
@@ -19,6 +19,7 @@ const HomePage = {
             </main>
             <footer>
             <div class="flex md:flex-row flex-col max-w-6xl m-auto my-10">
+            
             <div class="md:w-1/3 p-4 flex justify-center items-center bg-gray-200 mx-2 rounded">
                <div class="w-16 h-16 p-2">
                   <svg class="fill-current " width="100%" height="100%" viewBox="0 0 48 48" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule: evenodd; clip-rule: evenodd; stroke-linejoin: round; stroke-miterlimit: 2;">
