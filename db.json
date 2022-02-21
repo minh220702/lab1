@@ -1,10 +1,50 @@
 {
     "posts": [
-      { "id": 1, "title": "json-server", "author": "typicode" }
+      {
+        "id": "13",
+        "img": "http://res.cloudinary.com/oleminhsolsa/image/upload/v1645433155/vaptbgyfopxhnzoocrc9.jpg",
+        "title": "Levi Turcotte",
+        "desc": "Alo"
+      },
+      {
+        "createdAt": "2022-01-10T15:09:36.220Z",
+        "title": "Heather Labadie",
+        "img": "http://placeimg.com/640/480/sports",
+        "desc": "Boston's most advanced compression wear technology increases muscle oxygenation, stabilizes active muscles",
+        "id": "15"
+      },
+      {
+        "createdAt": "2022-01-11T03:02:51.996Z",
+        "title": "Daryl Hettinger I",
+        "img": "http://placeimg.com/640/480/nature",
+        "desc": "The automobile layout consists of a front-engine design, with transaxle-type transmissions mounted at the rear of the engine and four wheel drive",
+        "id": "16"
+      },
+      {
+        "title": "",
+        "img": "https://res.cloudinary.com/oleminhsolsa/image/upload/v1645434401/gifmrprtjw5mfpe2tqwt.jpg",
+        "desc": "",
+        "id": "TI9SMOC"
+      },
+      {
+        "title": "",
+        "img": "https://res.cloudinary.com/oleminhsolsa/image/upload/v1645435192/fgrhxivhlrho0uiykrq2.png",
+        "desc": "",
+        "id": "TJVrI_P"
+      }
     ],
-    "comments": [
-      { "id": 1, "body": "some comment", "postId": 1 }
-    ],
-    "profile": { "name": "typicode" }
+    "users": [
+      {
+        "email": "admin@gmail.com",
+        "password": "$2a$10$OTVFVCKZCCFWdzAmh5mxxexYagEPBaw0v8nR06/MLgQi5nIzTvbkK",
+        "username": "datlt2306",
+        "id": 1
+      },
+      {
+        "email": "hai@gmail.com",
+        "password": "$2a$10$1uwkbijJpTm60f8bfTuQBuEGRlRxVGfTjIMQCmT0dWAMC429Tt2my",
+        "username": "Minh",
+        "id": 1
+      }
+    ]
   }
-  
