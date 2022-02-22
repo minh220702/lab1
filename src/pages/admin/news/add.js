@@ -52,7 +52,9 @@ const AdminAddNews = {
               Chi tiết nội dung <input name="" id="desc-post" cols="30" rows="10" class="bg-gray-100 p-2 rounded-lg border-2 border-indigo-500 shadow-md focus:outline-none focus:border-indigo-600"></input><br />
              Danh mục <select class="font-bold text-[20px] text-green-800 border-[2px] border-solid border-green" name="" id="category"> 
               </select><br>
-              <button class="bg-blue-500 p-4 text-white mt-2">Thêm</button>
+              
+              <button class="bg-blue-500 p-4 text-white mt-2">Thêm</button> 
+              <span id="result" class="text-red"> </span>
             </form>
             <!-- /End replace -->
           </div>
@@ -127,7 +129,11 @@ const AdminAddNews = {
             img: imgLink ? imgLink : "",
             desc:document.querySelector('#desc-post').value,
             categoryId: document.querySelector("#category").value,
-          });
+          }).then(() => {
+            document.querySelector("#result").innerHTML = "Thành công";
+        }).catch(() => {
+            document.querySelector("#result").innerHTML = "Thất bại";
+        })
         }
         addProduct();
       }

@@ -55,6 +55,7 @@ const AdminEditNews = {
                 value="${data.desc}"
               ></input><br />
               <button class="bg-blue-500 p-4 text-white mt-2">Cập nhật</button>
+              <span id="result" class="text-red"> </span>
             </form>
             <!-- /End replace -->
           </div>
@@ -99,7 +100,11 @@ const AdminEditNews = {
             title: document.querySelector('#title-post').value,
             img: imgLink ? imgLink : imgPreview.src,
             desc:document.querySelector('#desc-post').value,
-        });
+        }).then(() => {
+          document.querySelector("#result").innerHTML = "Thành công";
+      }).catch(() => {
+          document.querySelector("#result").innerHTML = "Thất bại";
+      })
 
     });
 
