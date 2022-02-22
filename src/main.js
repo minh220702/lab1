@@ -10,6 +10,8 @@ import ProductsPage from "./pages/product";
 import DetailProductPage from "./pages/product/detail";
 import Signin from "./pages/signin";
 import Signup from "./pages/signup";
+import Contact from "./pages/contact";
+import AddCate from "./pages/admin/news/addcate";
 
 const router = new Navigo("/", { linksSelector: "a", hash: true });
 const print = async (content, id) => {
@@ -45,6 +47,8 @@ router.on({
     "/admin/dashboard": () => print(Dashboard),
     "/admin/news": () => print(AdminNews),
     "/admin/news/add": () => print(AdminAddNews),
+    "/admin/news/addcate": () => print(AddCate),
+    "/contact": () => print(Contact),
     "/admin/news/:id/edit": ({data}) => print(AdminEditNews, data.id),
     "/signup": () => print(Signup),
     "/signin": () => print(Signin),

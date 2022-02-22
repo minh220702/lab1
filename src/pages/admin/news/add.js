@@ -50,6 +50,8 @@ const AdminAddNews = {
               > <br />
               <img src="http://2.bp.blogspot.com/-MowVHfLkoZU/VhgIRyPbIoI/AAAAAAAATtI/fHk-j_MYUBs/s640/placeholder-image.jpg" id="img-preview"/>
               Chi tiết nội dung <input name="" id="desc-post" cols="30" rows="10" class="bg-gray-100 p-2 rounded-lg border-2 border-indigo-500 shadow-md focus:outline-none focus:border-indigo-600"></input><br />
+             Danh mục <select class="font-bold text-[20px] text-green-800 border-[2px] border-solid border-green" name="" id="category"> 
+              </select><br>
               <button class="bg-blue-500 p-4 text-white mt-2">Thêm</button>
             </form>
             <!-- /End replace -->
@@ -60,6 +62,22 @@ const AdminAddNews = {
         `;
   },
   afterRender() {
+    var opt = {
+      url: 'http://localhost:3001/category',
+      responseTyoe: 'JSON'
+    }
+    axios(opt)
+    .then(function(data){
+     
+      var showcate = "";
+      data.data.forEach(function(cate){
+        showcate += `
+        <option value="${cate.id}">${cate.name}</option>
+        `;
+      })
+      document.querySelector("#category").innerHTML = showcate;
+
+    })
     const formAdd = $("#form-add");
     const imgPost = document.querySelector('#img-post');
     const imgPreview = document.querySelector('#img-preview');
@@ -108,6 +126,7 @@ const AdminAddNews = {
             title: document.querySelector('#title-post').value,
             img: imgLink ? imgLink : "",
             desc:document.querySelector('#desc-post').value,
+            categoryId: document.querySelector("#category").value,
           });
         }
         addProduct();
