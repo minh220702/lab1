@@ -1,5 +1,6 @@
+import Header from "../components/header";
 import { decreaseQty, increaseQty, removeItemInCart } from "../utils/cart";
-import { reRender } from "../utils/rerender";
+import { reRender } from "../utils/reRender";
 import { $ } from "../utils/selector";
 import toastr from 'toastr';
 import "toastr/build/toastr.min.css";
@@ -11,40 +12,48 @@ const CartPage = {
             cart = JSON.parse(localStorage.getItem('cart'));
         }
         return `
-            <table>
-                <thead>
-                    <tr>
-                        <th class="text-left">Tên sản phẩm</th>
-                        <th class="text-left">Giá sản phẩm</th>
-                        <th class="text-left">Số lượng</th>
-                        <th>
+        <header>
+        ${Header.render()}
+        </header>
+        <main class="w-[1600px] mt-[30px]">
+        <div class="w-[1170px] mx-auto">
+            <table class="w-[70%] ">
+              <tr class="bg-[#04AA6D]">
+                <th class="border-[1px] border-solid border-[#ddd] p-[8px] ">Ảnh</th>
+                <th class="border-[1px] border-solid border-[#ddd] p-[8px]"> Tên sản phẩm</th>
+           
+                
+              
+                <th class="border-[1px] border-solid border-[#ddd] p-[8px]">Xoá</th>
+              </tr>
+                ${cart.length > 0 ? cart.map(item => `
+                <tr class="hover:bg-yellow-600">
+                <td class="w-[120px]">  <img alt="ecommerce" class="lg: object-cover object-center rounded border  w-[300px]" src="${item.img}"></td>
+                <td class="border-[1px] border-solid border-[#ddd] w-[100px] p-[8px]">${item.title}</td>
+              
+              
 
-                        </th>
-                    </tr>
-                </thead>
-                <tbody>
-
-                    ${cart.length > 0 ? cart.map(item => `
-                        <tr>
-                            <td>${item.name}</td>
-                            <td>${item.price}</td>
-                            <td>
-                                <input type="number" value="${item.quantity}" class="border border-gray-400 p-3" />
-                                <button data-id="${item.id}" class="btn btn-increase inline-block p-3 bg-green-500 text-white">Tăng</button>
-                                <button data-id="${item.id}" class="btn btn-decrease inline-block p-3 bg-orange-500 text-white">Giảm</button>
-                            </td>
-                            <td>
-                            <button data-id="${item.id}" class="btn btn-remove inline-block p-3 bg-red-500 text-white">Xóa</button>
-                            </td>
-                        </tr>
-                    `).join("") : `
-                        <tr>
-                            <td colspan="4">No record</td>
-                        </tr>
-                    `}
-                    
-                </tbody>
+                <td class="border-[1px] border-solid border-[#ddd] w-[20px] p-[8px] text-center  bg-red-300"><button data-id="${item.id}" class="btn btn-remove font-bold">Xoá</button></td>
+                </tr>
+                <tr >
+               
+                  </tr>
+                `).join("") : `
+                 <tr> 
+                 <td colspan="4"> No record </td>
+                 </tr>
+                
+                `}
+                <form>
+              
+            
+              
+              </form>
+              
             </table>
+            <button class=" bg-red-500 p-[15px] w-[120px] rounded-[5px]  mt-[30px] text-white"><a href="/">Mua hàng</a></button></td>
+        </div>
+    </main>
         `
     },
     afterRender(){
@@ -59,7 +68,7 @@ const CartPage = {
                 } else {
                     removeItemInCart(id, () => {
                         reRender(CartPage, "#app");
-                        toastr.success("Bạn đã xóa thành công")
+                      
                     })
                 }
             })
