@@ -1,4 +1,4 @@
-import { getAll } from "../../../api/cate"
+import { getAll, remove } from "../../../api/cate"
 
 import NavAdmin from "../../../components/NavAdmin";
 import { reRender } from "../../../utils/reRender";

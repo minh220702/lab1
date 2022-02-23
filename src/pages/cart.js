@@ -2,8 +2,7 @@ import Header from "../components/header";
 import { decreaseQty, increaseQty, removeItemInCart } from "../utils/cart";
 import { reRender } from "../utils/reRender";
 import { $ } from "../utils/selector";
-import toastr from 'toastr';
-import "toastr/build/toastr.min.css";
+
 
 const CartPage = {
     render(){
@@ -21,7 +20,7 @@ const CartPage = {
               <tr class="bg-[#04AA6D]">
                 <th class="border-[1px] border-solid border-[#ddd] p-[8px] ">Ảnh</th>
                 <th class="border-[1px] border-solid border-[#ddd] p-[8px]"> Tên sản phẩm</th>
-           
+                <th class="border-[1px] border-solid border-[#ddd] p-[8px]">Giá</th>
                 
               
                 <th class="border-[1px] border-solid border-[#ddd] p-[8px]">Xoá</th>
@@ -30,10 +29,9 @@ const CartPage = {
                 <tr class="hover:bg-yellow-600">
                 <td class="w-[120px]">  <img alt="ecommerce" class="lg: object-cover object-center rounded border  w-[300px]" src="${item.img}"></td>
                 <td class="border-[1px] border-solid border-[#ddd] w-[100px] p-[8px]">${item.title}</td>
-              
-              
+                <td class="border-[1px] border-solid border-[#ddd] w-[100px] p-[8px]">58$</td>
 
-                <td class="border-[1px] border-solid border-[#ddd] w-[20px] p-[8px] text-center  bg-red-300"><button data-id="${item.id}" class="btn btn-remove font-bold">Xoá</button></td>
+            <td class="border-[1px] border-solid border-[#ddd] w-[20px] p-[8px] text-center  bg-red-300"><button data-id="${item.id}" class="btn btn-remove font-bold">Xoá</button></td>
                 </tr>
                 <tr >
                
