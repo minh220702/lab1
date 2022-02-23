@@ -1,12 +1,12 @@
 import { getAll } from "../../../api/cate"
 
-import Header from "../../../components/header";
+import NavAdmin from "../../../components/NavAdmin";
 import { reRender } from "../../../utils/reRender";
 const showCate = {
  async render() {
   const { data } = await getAll();
         return /* html */ `
-        ${await Header.render()}
+        ${await NavAdmin.render()}
         <div class="w-[1600px] bg-pink-100">
         <div class="news w-[1170px] mx-auto">
           <table class="border-collapse w-[100%]">
