@@ -13,6 +13,7 @@ import Signup from "./pages/signup";
 import Contact from "./pages/contact";
 import AddCate from "./pages/admin/news/addcate";
 import showCate from "./pages/admin/news/showcate";
+import EditC from "./pages/admin/news/editcate";
 
 const router = new Navigo("/", { linksSelector: "a", hash: true });
 const print = async (content, id) => {
@@ -50,6 +51,7 @@ router.on({
     "/admin/news/add": () => print(AdminAddNews),
     "/admin/news/addcate": () => print(AddCate),
     "/admin/news/showcate": () => print(showCate),
+    "/admin/news/showcate/:id/editcate": ({data}) => print(EditC, data.id),
     "/contact": () => print(Contact),
     "/admin/news/:id/edit": ({data}) => print(AdminEditNews, data.id),
     "/signup": () => print(Signup),

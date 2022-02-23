@@ -77,8 +77,12 @@
   ],
   "categorys": [
     {
-      "name": "Minh",
+      "name": "Hải",
       "id": 1
+    },
+    {
+      "name": "Minh",
+      "id": 2
     }
   ],
   "products": [
