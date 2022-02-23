@@ -53,9 +53,7 @@ const AdminNews = {
                                 <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
                                 Tiêu đề
                                 </th>
-                                <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                               Danh mục
-                                </th>
+                                
                                 <th scope="col" class="relative px-6 py-3">
                                     <span class="sr-only">Edit</span>
                                 </th>
@@ -73,9 +71,7 @@ const AdminNews = {
                                     <td class="px-6 py-4 whitespace-nowrap">
                                     ${post.title}
                                     </td>
-                                    <td class="px-6 py-4 whitespace-nowrap">
-                                    ${category.id}
-                                    </td>
+                                
                                     <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
                                         <a href="/#/admin/news/${post.id}/edit" class="text-indigo-600 hover:text-indigo-900">Edit</a>
                                         <button data-id="${post.id}" class="btn btn-delete bg-indigo-600 hover:bg-indigo-900 px-4 py-3 text-white rounded-full">Delete</button>

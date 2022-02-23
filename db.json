@@ -61,20 +61,6 @@
       "id": 10
     },
     {
-      "title": "Alo dông sê ộ",
-      "img": "http://res.cloudinary.com/oleminhsolsa/image/upload/v1645524897/v9jqdeftlleb6bdsdrgy.jpg",
-      "desc": "Mùa Đông năm 2021 đang đến gần, có lẽ vì thế trong những ngày này chúng ta đang dần thiếu đi những động lực để có thể ra ngoài và chơi bóng trong một đêm tối lạnh lẽo, ẩm ướt. Chính vì đã nắm bắt được điều này, Nike ngay lập tức đã cho tung ra một bộ sưu tập giày đá bóng với gam màu mới ấm áp mang tên ‘Recharge Pack’. ",
-      "categoryId": "1",
-      "id": 11
-    },
-    {
-      "title": "Thành nương oke",
-      "img": "http://res.cloudinary.com/oleminhsolsa/image/upload/v1645525171/kl5wlx3ueie4xymubdcd.png",
-      "desc": "Mùa Đông năm 2021 đang đến gần, có lẽ vì thế trong những ngày này chúng ta đang dần thiếu đi những động lực để có thể ra ngoài và chơi bóng trong một đêm tối lạnh lẽo, ẩm ướt. Chính vì đã nắm bắt được điều này, Nike ngay lập tức đã cho tung ra một bộ sưu tập giày đá bóng với gam màu mới ấm áp mang tên ‘Recharge Pack’. ",
-      "categoryId": "1",
-      "id": 12
-    },
-    {
       "title": "ADIDAS COPA SENSE .1 FG SAPPHIRE EDGE - NAVY BLUE/FOOTWEAR WHITE/BLUE RUSH",
       "img": "http://res.cloudinary.com/oleminhsolsa/image/upload/v1645525531/fs0wpu2mlroqzjmy90ak.png",
       "desc": "Mùa Đông năm 2021 đang đến gần, có lẽ vì thế trong những ngày này chúng ta đang dần thiếu đi những động lực để có thể ra ngoài và chơi bóng trong một đêm tối lạnh lẽo, ẩm ướt. Chính vì đã nắm bắt được điều này, Nike ngay lập tức đã cho tung ra một bộ sưu tập giày đá bóng với gam màu mới ấm áp mang tên ‘Recharge Pack’. ",
@@ -89,7 +75,7 @@
       "id": 14
     }
   ],
-  "category": [
+  "categorys": [
     {
       "name": "Minh",
       "id": 1

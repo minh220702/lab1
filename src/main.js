@@ -12,6 +12,7 @@ import Signin from "./pages/signin";
 import Signup from "./pages/signup";
 import Contact from "./pages/contact";
 import AddCate from "./pages/admin/news/addcate";
+import showCate from "./pages/admin/news/showcate";
 
 const router = new Navigo("/", { linksSelector: "a", hash: true });
 const print = async (content, id) => {
@@ -48,6 +49,7 @@ router.on({
     "/admin/news": () => print(AdminNews),
     "/admin/news/add": () => print(AdminAddNews),
     "/admin/news/addcate": () => print(AddCate),
+    "/admin/news/showcate": () => print(showCate),
     "/contact": () => print(Contact),
     "/admin/news/:id/edit": ({data}) => print(AdminEditNews, data.id),
     "/signup": () => print(Signup),
